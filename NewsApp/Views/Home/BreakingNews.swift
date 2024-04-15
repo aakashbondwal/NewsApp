@@ -75,7 +75,7 @@ struct BreakingNews: View {
                 VStack(alignment: .leading, spacing: 20) {
                     
                     Text(title)
-                        .font(.title)
+                        .font(.largeTitle)
                         .bold()
                     
                    
