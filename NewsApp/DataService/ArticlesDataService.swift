@@ -13,6 +13,7 @@ class ArticlesDataService {
     @Published var allArticles: ArticlesDataModel?
     
     var articleSubscription: AnyCancellable?
+<<<<<<< HEAD
     
     init() {
         getData()
@@ -22,6 +23,17 @@ class ArticlesDataService {
         
         
         guard let url = URL(string: "https://api.spaceflightnewsapi.net/v4/articles/?limit=100") else { return }
+=======
+
+    init(selectData: String) {
+        getData(selectData: selectData)
+    }
+    
+    private func getData(selectData: String) {
+        
+        
+        guard let url = URL(string: "https://api.spaceflightnewsapi.net/v4/\(selectData)/?limit=100") else { return }
+>>>>>>> bd2b336 (Fix: Replaced Old API service with the new one)
         
         articleSubscription = NetworkingManager.download(url: url)
             .decode(type: ArticlesDataModel.self, decoder: JSONDecoder())

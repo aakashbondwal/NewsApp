@@ -14,7 +14,11 @@ struct SplashScreen: View {
     var body: some View {
         ZStack {
             if self.isActive {
+<<<<<<< HEAD
                 CustomTabBar()
+=======
+                Home()
+>>>>>>> bd2b336 (Fix: Replaced Old API service with the new one)
             } else {
                 ZStack {
 
